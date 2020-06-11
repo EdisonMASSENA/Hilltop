@@ -16,6 +16,14 @@ class HillController extends AbstractController
             'controller_name' => 'HillController',
         ]);
     }
-    
 
+    /**
+     * @Route("/player", name="player")
+     */
+    public function player()
+    {
+        return $this->render('hill/player.html.twig', [
+            'controller_name' => 'HillController',
+        ]);
+    }
 }
