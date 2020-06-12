@@ -11,6 +11,7 @@ class MusiqueFixtures extends Fixture{
     public function load(ObjectManager $manager){
 
         for($i = 1; $i <= 10; $i++) { 
+          
             $musique = new Musique();
 
             $musique->setArtiste("Artiste n°$i") 
@@ -21,5 +22,6 @@ class MusiqueFixtures extends Fixture{
         }
         
         $manager->flush();
+
     }
 }
