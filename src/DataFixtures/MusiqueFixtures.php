@@ -11,13 +11,17 @@ class MusiqueFixtures extends Fixture{
     public function load(ObjectManager $manager){
 
         for($i = 1; $i <= 10; $i++) { 
+          
             $musique = new Musique();
 
-            $musique->setArtiste("Titre de l'article n°$i") 
-                    ->setAlbum("<p>Contenu de l'article n°$i</p>") 
-                    ->setTitre("http://placehold.it/250x150");
+            $musique->setArtiste("Artiste n°$i") 
+                    ->setAlbum("<p>Album n°$i</p>") 
+                    ->setTitre("Titre");
 
             $manager->persist($musique);
         }
+        
+        $manager->flush();
+
     }
 }
