@@ -2,23 +2,27 @@
 
 namespace App\DataFixtures;
 
+use Faker\Factory;
+use App\Entity\Musique;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-use App\Entity\Musique;
 
 class MusiqueFixtures extends Fixture{
 
     public function load(ObjectManager $manager){
 
-        for($i = 1; $i <= 10; $i++) { 
-          
-            $musique = new Musique();
+        $faker = \Faker\Factory::create('fr_FR');
+       
+            for($j = 1; $j <= mt_rand(10,13); $j++)
+            {
+                $musique = new Musique;
 
-            $musique->setArtiste("Artiste n°$i") 
-                    ->setAlbum("<p>Album n°$i</p>") 
-                    ->setTitre("Titre");
+                $musique->setArtiste($faker->name())
+                        ->setAlbum($faker->word())
+                        ->setTitre($faker->word())
+                        ->setImage($faker->imageUrl());
 
-            $manager->persist($musique);
+                $manager->persist($musique);
         }
         
         $manager->flush();
