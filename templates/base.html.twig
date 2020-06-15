@@ -3,20 +3,156 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{% block title %}{% endblock %}Hilltop</title>
+		<title>{% block title %}Hilltop{% endblock %}</title>
+		{% block stylesheets %}
+
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+		 {% endblock %}
 	</head>
 	<body>
+		<div style="width : 75%; margin: 0 auto;">
+			<nav class="navbar navbar-expand-md navbar-light bg-light">
+				 <a class="navbar-brand" href="#">
+					<img src="img/logo_HillTop_def.png" width="30" height="30" alt="" loading="lazy">
+				</a>
+                <a class="navbar-brand" href="{{ path('home') }}">Hilltop</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-		<header></header>
+                <div class="collapse navbar-collapse" id="navbarsExample04">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Connexion</a>
+                    </li>
+					<li class="nav-item active">
+                        <a class="nav-link" href="">Inscription</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Artistes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégories</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="#">Rap</a>
+                        <a class="dropdown-item" href="#">House</a>
+                        <a class="dropdown-item" href="#">Pop</a>
+                        </div>
+                    </li>
+                    </ul>
+                    <form class="form-inline my-3 my-md-0">
+                    <input class="form-control" type="text" placeholder="Musique, artiste...">
+                    </form>
+                </div>
+            </nav>
+			<nav class="navbar navbar-warning bg-warning">
+			</nav>
+		</div>
+		
+			<div class="container mon-conteneur">
+		{% block body %}
+		
+		{% endblock %}
+			</div>
 
-		<nav></nav>
+		<!-- Footer -->
+		<footer class="page-footer font-small indigo">
 
-		{% block body %}{% endblock %}
+			<!-- Footer Links -->
+			<div class="container-footer text-center text-md-left">
+		
+			<!-- Grid row -->
+			<!-- <div class="row"> -->
+				
+				<div class="col-md-3 mx-auto">
+				<!-- Links -->
+				<h5 class="h5footer font-weight-bold text-uppercase mt-3 mb-4">SOCIÉTÉ</h5>
+		
+				<ul class="list-unstyled">
+					<li>
+					<a href="#!">A propos</a>
+					</li>
+					<li>
+					<a href="#!">Offre d'emploi</a>
+					</li>
+					<li>
+					<a href="#!">For the Record</a>
+					</li>
+				</ul>
+		
+				</div>
+			
+				<!-- Grid column -->
+				<div class="col-md-3 mx-auto">
+		
+				<!-- Links -->
+				<h5 class="h5footer font-weight-bold text-uppercase mt-3 mb-4">COMMUNAUTÉS</h5>
+		
+				<ul class="list-unstyled">
+					<li>
+					<a href="#!">Espace artistes</a>
+					</li>
+					<li>
+					<a href="#!">Développeurs</a>
+					</li>
+					<li>
+					<a href="#!">Marques</a>
+					</li>
+					<li>
+					<a href="#!">Investisseurs</a>
+					</li>
+					<li>
+					<a href="#!">Fournisseurs</a>
+					</li>
+				</ul>
+		
+				</div>
+				<!-- Grid column -->
 
-		<footer></footer>
+				<div class="col-md-3 mx-auto">
+		
+				<!-- Links -->
+				<h5 class="h5footer font-weight-bold text-uppercase mt-3 mb-4">LIENS UTILES</h5>
+		
+				<ul class="list-unstyled">
+					<li>
+					<a href="#!">Aide</a>
+					</li>
+					<li>
+					<a href="#!">Lecteur Web</a>
+					</li>
+					<li>
+					<a href="#!">Appli Mobile Gratuite</a>
+					</li>
+				</ul>
+		
+				</div>
+				<!-- Grid column -->
+		
+			</div>
+			<!-- Grid row -->
+		
+			</div>
+			<!-- Footer Links -->
+		
+			<!-- Copyright -->
+			<hr class="clearfix w-100 d-md-none pb-3">
+
+			<div class="footer-bas">© 2020 - Copyright - HillTop - 
+			<a class="lienfooter" href="#"> Légal</a>
+			<a class="lienfooter" href="#"> Centre de confidentialité</a>
+			<a class="lienfooter" href="#"> Protection  des données</a>
+			<a class="lienfooter" href="#"> Cookies</a>
+			<a class="lienfooter" href="#"> A propos des pubs</a>
+			</div>
+			<!-- Copyright -->
+		
+		</footer>
+		<!-- Footer -->
+
 
 	{% block javascripts %}
 		<script src=" {{ asset('js/app.js') }}"></script>
