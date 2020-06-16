@@ -57,6 +57,17 @@ class User implements UserInterface
      */
     private $prenom;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $compteArtiste;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $compteFan;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -121,6 +132,30 @@ class User implements UserInterface
 
         return $this;
     }
+    
+    public function getCompteArtiste(): ?bool
+    {
+        return $this->compteArtiste;
+    }
+
+    public function setCompteArtiste(bool $compteArtiste): self
+    {
+        $this->compteArtiste = $compteArtiste;
+
+        return $this;
+    }
+
+    public function getCompteFan(): ?bool
+    {
+        return $this->compteFan;
+    }
+
+    public function setCompteFan(bool $compteFan): self
+    {
+        $this->compteFan = $compteFan;
+
+        return $this;
+    }
 
 
     public function eraseCredentials()
@@ -137,6 +172,8 @@ class User implements UserInterface
     {
         return ['ROLE_USER'];
     }
+
+
 
 
 }
