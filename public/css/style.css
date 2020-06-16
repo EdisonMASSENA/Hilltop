@@ -1,63 +1,6 @@
 
-/* -------------------------popup------------------------ */
-.overlay{
-    position:fixed;
-    left:0px;
-    top:0px;
-    background-color: rgba(0,0,0, 20%);
-    width:100%;
-    height:100%;
-    display:none; 
-    z-index: 2;
-}
 
-.popup{
-    margin:5% auto;
-    width:40%;
-    background-color: white;
-    border-radius: 5px;
-    padding:1em;
-}
-
-.jaune{
-    color:#ffce00;
-}
-
-.noir{
-    color:#000000,
-}
-
-h1{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.comptes{
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-.compteArtiste{
-    text-align: left;
-}
-
-.compteFan{
-    text-align: end;
-}
-
-.maigre{
-    font-size: 35px;
-    font-style: initial;
-    font-weight: normal;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.gras{
-    font-size: 35px;
-    font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-/*  ------------------------------------------footer --------------------------*/
+/*  ------------------------------------------FOOTER --------------------------*/
 ul 
 {
 	padding-inline-start: 0;
@@ -129,3 +72,55 @@ ul li a
 	margin-left: 20px;
 }
 
+/*  ------------------------------------------FIN FOOTER --------------------------*/
+
+/*  ------------------------------------------INSCRIPTION --------------------------*/
+
+
+.popup{
+    margin:5% auto;
+    width:40%;
+    background-color: white;
+    border-radius: 5px;
+    padding:1em;
+}
+
+.jaune{
+    color:#ffce00;
+}
+
+.noir{
+    color:#000000,
+}
+
+.titre{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.comptes{
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.compteArtiste{
+    text-align: left;
+}
+
+.compteFan{
+    text-align: end;
+}
+
+.maigre{
+    font-size: 35px;
+    font-style: initial;
+    font-weight: normal;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.gras{
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*  ------------------------------------------FIN INSCRIPTION --------------------------*/

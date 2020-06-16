@@ -3,74 +3,34 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-
-
-       <div id="overlay" class="overlay">
-            <div id="popup" class="popup">
-                <h1 class="text-center mt-4">Création de votre compte</h1>
-                <h1 class="text-center"><span class="jaune">Hill</span><span class="gras">Top</span></h1>
-                <br>
-
-                <form method="post" class="col-md-10 mx-auto">
-                    <div class="form-row" id="comptes" name="compte">
-                        <div class="texte-center mt-4 mx-auto" id="compteArtiste">
-                            <input type="checkbox" id="scales" name="scales">
-                            <label for="scales"><span class="maigre">Compte</span> <span class="gras">Artiste</span></h1></label>    
-                        </div>
-
-                        <div class="texte-center mt-4 mx-auto" id="compteFan">
-                            <input type="checkbox" id="scales" name="scales">
-                            <label for="scales"><span class="maigre">Compte</span> <span class="gras">Fan</span></h1></label>    
-                        </div>
-                        
-                    </div>
-
-                    <br>
-
-                </form>
-
-                <form method="post" class="col-md-10 mx-auto">
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label for="pseudo">Pseudo</label>
-                            <input type="text" class="form-control" id="pseudo" name="pseudo">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="pseudo">Mot de passe</label>
-                            <input type="text" class="form-control" id="mdp" name="mdp">
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <label for="pseudo">Confirmer votre mot de passe</label>
-                            <input type="text" class="form-control" id="confirmmdp" name="confirmmdp">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="pseudo">Nom</label>
-                            <input type="text" class="form-control" id="nom" name="nom">
-                        </div>
-
-                        <div class="form-group col-md-6">
-                            <label for="pseudo">Prénom</label>
-                            <input type="text" class="form-control" id="prenom" name="prenom">
-                        </div>
-                    </div>  
-
-                    <div class="form-group">
-                        <label for="pseudo">Email</label>
-                        <input type="text" class="form-control" id="email" name="email">
-                     </div>   
-                
-                    <br>
-                    <br>
-                    <button type="submit" class="form-group col-md-12 btn btn-warning md-12">Valider votre compte</button>
-                </form>
-            </div>
-       </div>
+<div style="width : 75%; margin: 0 auto;">
+<div class="card-group">
+  <div class="card">
+    <img src="" class="card-img-top" alt="">
+    <div class="card-body">
+      <h5 class="card-title">Musique</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="" class="card-img-top" alt="">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+</div>
 
 
 {% endblock %}

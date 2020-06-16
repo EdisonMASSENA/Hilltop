@@ -4,7 +4,9 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{% block title %}Hilltop{% endblock %}</title>
+
 		{% block stylesheets %}
+
 
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
     	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
@@ -26,10 +28,12 @@
                 <div class="collapse navbar-collapse" id="navbarsExample04">
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
+
                         <a class="nav-link" href="{{ path('security_login') }}" id="btnPopup">Connexion</a>
                     </li>
 					<li class="nav-item active">
                         <a class="nav-link" href="{{ path('security_registration') }}" id="btnPopup">Inscription</a>
+
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="">Artistes</a>

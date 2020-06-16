@@ -8,6 +8,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class RegistrationType extends AbstractType
 {
@@ -20,6 +21,14 @@ class RegistrationType extends AbstractType
             ->add('confirm_password', PasswordType::class)
             ->add('nom')
             ->add('prenom')
+            ->add('compteArtiste',CheckboxType::class, [
+                'label'    => false,
+                'required' => false,
+            ])
+            ->add('compteFan',CheckboxType::class , [
+                'label'    => false,
+                'required' => false,
+            ])
         ;
     }
 
