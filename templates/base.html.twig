@@ -27,14 +27,16 @@
 
                 <div class="collapse navbar-collapse" id="navbarsExample04">
                     <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+					
+						<li class="nav-item active">
+							<a class="nav-link" href="{{ path('security_login') }}" id="btnPopup">Connexion</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="{{ path('security_registration') }}" id="btnPopup">Inscription</a>
+						</li>
+					
+						
 
-                        <a class="nav-link" href="{{ path('security_login') }}" id="btnPopup">Connexion</a>
-                    </li>
-					<li class="nav-item active">
-                        <a class="nav-link" href="{{ path('security_registration') }}" id="btnPopup">Inscription</a>
-
-                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="">Artistes</a>
                     </li>
