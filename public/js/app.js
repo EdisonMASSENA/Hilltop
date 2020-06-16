@@ -1,3 +1,5 @@
+// --------------------------player------------------------
+
 var song = new Audio;
 var muted = false;
 var vol = 1;
