@@ -21,12 +21,12 @@ class HillController extends AbstractController
        
         $repo = $this->getDoctrine()->getRepository(Musique::class);
 
-        $musiques = $repo->findAll(); 
-        dump($musiques);
+        $musique = $repo->findAll(); 
+        dump($musique);
 
         return $this->render('hill/home.html.twig', [
             'controller_name' => 'HillController',
-            'musiques' => $musiques 
+            'musique' => $musique 
         ]);
     }
 
