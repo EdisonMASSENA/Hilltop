@@ -21,12 +21,12 @@ class HillController extends AbstractController
        
         $repo = $this->getDoctrine()->getRepository(Musique::class);
 
-        $musique = $repo->findAll(); 
-        dump($musique);
+        $musiques = $repo->findAll(); 
+        dump($musiques);
 
         return $this->render('hill/home.html.twig', [
             'controller_name' => 'HillController',
-            'musique' => $musique 
+            'musiques' => $musiques 
         ]);
     }
 
@@ -37,21 +37,6 @@ class HillController extends AbstractController
     {
         return $this->render('hill/player.html.twig', [
             'controller_name' => 'HillController',
-        ]);
-    }
-     /**
-     * @Route("/profileArtiste/{id}", name="profile_artiste")
-     */
-    public function show(User $user) // 1
-    {
-         $repo = $this->getDoctrine()->getRepository(User::class);
-
-         $user = $repo->find($id);
-
-        dump($user);
-
-        return $this->render('blog/show.html.twig', [
-            'user' => $user
         ]);
     }
 
