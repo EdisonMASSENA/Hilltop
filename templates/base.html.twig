@@ -27,14 +27,15 @@
 
                 <div class="collapse navbar-collapse" id="navbarsExample04">
                     <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-
-                        <a class="nav-link" href="{{ path('security_login') }}" id="btnPopup">Connexion</a>
-                    </li>
-					<li class="nav-item active">
-                        <a class="nav-link" href="{{ path('security_registration') }}" id="btnPopup">Inscription</a>
-
-                    </li>
+					{% if not app.user %}
+						<li class="nav-item active">
+							<a class="nav-link" href="{{ path('security_login') }}" id="">Connexion</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="{{ path('security_registration') }}" id="">Inscription</a>
+						</li>
+					{% endif %}
+						
                     <li class="nav-item active">
                         <a class="nav-link" href="">Artistes</a>
                     </li>
@@ -46,6 +47,11 @@
                         <a class="dropdown-item" href="#">Pop</a>
                         </div>
                     </li>
+					{% if app.user %}
+					<li class="nav-item active">
+						<a class="nav-link" href="{{ path('security_logout') }}" id="">Deconnexion</a>
+					</li>
+					{% endif %}
                     </ul>
                     <form class="form-inline my-3 my-md-0">
                     <input class="form-control" type="text" placeholder="Musique, artiste...">

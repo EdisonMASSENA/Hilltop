@@ -3,6 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Entity\Musique;
+use App\Repository\UserRepository;
+use App\Repository\MusiqueRepository;
 use App\Form\RegistrationType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -28,7 +31,6 @@ class SecurityController extends AbstractController
         if($form->isSubmitted() && $form->isValid())
         {
             $hash = $encoder->encodePassword($user, $user->getPassword());
-
             $user->setPassword($hash); 
 
             $manager->persist($user);
