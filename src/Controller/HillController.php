@@ -2,31 +2,18 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
-use App\Entity\Musique;
-use App\Repository\UserRepository;
-use App\Repository\MusiqueRepository;
-use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Routing\Annotation\Route;
 
 class HillController extends AbstractController
 {
     /**
      * @Route("/", name="home")
      */
-    public function index(MusiqueRepository $repo)
+    public function home()
     {
-       
-        $repo = $this->getDoctrine()->getRepository(Musique::class);
-
-        $musique = $repo->findAll(); 
-        dump($musique);
-
         return $this->render('hill/home.html.twig', [
             'controller_name' => 'HillController',
-            'musique' => $musique 
         ]);
     }
 
